@@ -1,9 +1,30 @@
 const Manager = require("./lib/Manager");
-// const generateHtml = require("./lib/generateHTML");
-// const fs = require("fs");
+const inquirer = require("inquirer");
 
-// initialize a new manager to begin creating a team
-const manager = new Manager();
 
-// moves user to manager class to begin team building
-manager.newManager();
+inquirer
+    .prompt([
+        {
+            type: "input",
+            message: "What is your name?",
+            name: "name"
+        },
+        {
+            type: "input",
+            message: "What is your id?",
+            name: "id"
+        },
+        {
+            type: "input",
+            message: "What is your e-mail address?",
+            name: "email"
+        },
+        {
+            type: "input",
+            message: "What is your office number?",
+            name: "officenumber"
+        }
+    ])
+    .then((res) => {
+        const manager = new Manager(res);
+    })
