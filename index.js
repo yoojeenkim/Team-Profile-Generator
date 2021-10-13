@@ -3,6 +3,7 @@ const inquirer = require("inquirer");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern.js");
 const generateHtml = require("./lib/generateHtml.js");
+const generateCss = require("./lib/generateCss.js");
 const fs = require("fs");
 const obj = [];
 
@@ -10,7 +11,13 @@ function writeToFile(fileName, data) {
     const htmlContent = generateHtml(data);
 
     fs.writeFile(fileName, htmlContent, (err) =>
-    err ? console.log(err) : console.log("Successfully created html file!")
+    err ? console.log(err) : console.log("Successfully created HTML file!")
+    );
+
+    const cssContent = generateCss();
+
+    fs.writeFile("./output/styles.css", cssContent, (err) => 
+    err ? console.log(err) : console.log("Succesfully created CSS file!")
     );
 }
 
@@ -46,7 +53,7 @@ function internCard() {
         ])
         .then((res) => {
             const intern = new Intern(res);
-
+            
             obj.push(intern);
 
             switch (res.choices) {
@@ -55,7 +62,7 @@ function internCard() {
                 case 'Intern':
                     return internCard();
                 case 'Quit':
-                    return writeToFile("./output/index.html,", obj);
+                    return writeToFile("./output/index.html", obj);
             }
         });
 }
@@ -101,7 +108,7 @@ function engineerCard() {
                 case 'Intern':
                     return internCard();
                 case 'Quit':
-                    return writeToFile("./output/index.html,", obj);
+                    return writeToFile("./output/index.html", obj);
             }
         });
 }
@@ -147,7 +154,7 @@ function init() {
                 case 'Intern':
                     return internCard();
                 case 'Quit':
-                    return writeToFile("./output/index.html,", obj);
+                    return writeToFile("./output/index.html", obj);
             }
         });
 }
