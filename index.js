@@ -2,8 +2,7 @@ const Manager = require("./lib/Manager");
 const inquirer = require("inquirer");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern.js");
-const generateHtml = require("./lib/generateHtml.js");
-const generateCss = require("./lib/generateCss.js");
+const generateHtml = require("./src/generateHtml.js");
 const fs = require("fs");
 const obj = [];
 
@@ -12,12 +11,6 @@ function writeToFile(fileName, data) {
 
     fs.writeFile(fileName, htmlContent, (err) =>
     err ? console.log(err) : console.log("Successfully created HTML file!")
-    );
-
-    const cssContent = generateCss();
-
-    fs.writeFile("./output/styles.css", cssContent, (err) => 
-    err ? console.log(err) : console.log("Succesfully created CSS file!")
     );
 }
 

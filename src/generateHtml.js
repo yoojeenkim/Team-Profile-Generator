@@ -5,9 +5,9 @@ function renderCards(data) {
             <div class="card-body">
                 <h4 class="card-title">${data.name}</h4>
                 <h6 class="text-muted card-sub-title mb-2">Manager</h6>
-                <p>${data.id}</p>
-                <p>${data.email}</p>
-                <p>${data.officenumber}</p>
+                <p>ID: ${data.id}</p>
+                <p>Email: ${data.email}</p>
+                <p>Office Number: ${data.officenumber}</p>
             </div>
             </div>`;
         case 'Engineer':
@@ -15,9 +15,9 @@ function renderCards(data) {
             <div class="card-body">
                 <h4 class="card-title">${data.name}</h4>
                 <h6 class="text-muted card-sub-title mb-2">Engineer</h6>
-                <p>${data.id}</p>
-                <p>${data.email}</p>
-                <p>${data.officenumber}</p>
+                <p>ID: ${data.id}</p>
+                <p>Email: ${data.email}</p>
+                <p>GitHub: ${data.github}</p>
             </div>
             </div>`;
         case 'Intern':
@@ -25,9 +25,9 @@ function renderCards(data) {
             <div class="card-body">
                 <h4 class="card-title">${data.name}</h4>
                 <h6 class="text-muted card-sub-title mb-2">Intern</h6>
-                <p>${data.id}</p>
-                <p>${data.email}</p>
-                <p>${data.officenumber}</p>
+                <p>ID: ${data.id}</p>
+                <p>Email: ${data.email}</p>
+                <p>School: ${data.school}</p>
             </div>
             </div>`;
     }
