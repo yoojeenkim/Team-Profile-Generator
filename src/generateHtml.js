@@ -2,33 +2,45 @@ function renderCards(data) {
     switch (data.role) {
         case 'Manager':
             return `<div class="card">
+            <div class="card-header text-white bg-primary">
+            <h4 class="card-title">${data.name}</h4>
+            <h6 class="text-muted card-sub-title mb-2">Manager</h6>
+            </div>
             <div class="card-body">
-                <h4 class="card-title">${data.name}</h4>
-                <h6 class="text-muted card-sub-title mb-2">Manager</h6>
-                <p>ID: ${data.id}</p>
-                <p>Email: ${data.email}</p>
-                <p>Office Number: ${data.officenumber}</p>
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item">ID: ${data.id}</li>
+            <li class="list-group-item">Email: ${data.email}</li>
+            <li class="list-group-item">Office Number: ${data.officenumber}</li>
+            </ul>
             </div>
             </div>`;
         case 'Engineer':
             return `<div class="card">
+            <div class="card-header text-white bg-primary">
+            <h4 class="card-title">${data.name}</h4>
+            <h6 class="text-muted card-sub-title mb-2">Engineer</h6>
+            </div>
             <div class="card-body">
-                <h4 class="card-title">${data.name}</h4>
-                <h6 class="text-muted card-sub-title mb-2">Engineer</h6>
-                <p>ID: ${data.id}</p>
-                <p>Email: ${data.email}</p>
-                <p>GitHub: ${data.github}</p>
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item">ID: ${data.id}</li>
+            <li class="list-group-item">Email: ${data.email}</li>
+            <li class="list-group-item">GitHub: ${data.github}</li>
+            </ul>
             </div>
             </div>`;
         case 'Intern':
             return `<div class="card">
-            <div class="card-body">
-                <h4 class="card-title">${data.name}</h4>
-                <h6 class="text-muted card-sub-title mb-2">Intern</h6>
-                <p>ID: ${data.id}</p>
-                <p>Email: ${data.email}</p>
-                <p>School: ${data.school}</p>
+            <div class="card-header text-white bg-primary">
+            <h4 class="card-title">${data.name}</h4>
+            <h6 class="text-muted card-sub-title mb-2">Intern</h6>
             </div>
+            <div class="card-body">
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item">ID: ${data.id}</li>
+            <li class="list-group-item">Email: ${data.email}</li>
+            <li class="list-group-item">School: ${data.school}</li>
+            </div>
+            </ul>
             </div>`;
     }
 }
