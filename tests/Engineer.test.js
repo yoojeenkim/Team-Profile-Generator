@@ -3,16 +3,22 @@ const Engineer = require("../lib/Engineer.js");
 describe("Employee", () => {
     describe("constructor", () => {
         it("should call the name, id, and email and associate it to the employee class", () => {
+            const value = {
+                name: "engineer",
+                id: "1",
+                email: "engineer@gmail.com",
+                github: "github.com/engineer"
+            }
             const newEngineer = new Engineer(value);
-            const name = newEngineer.value.name;
-            const id = newEngineer.value.id;
-            const email = newEngineer.value.email;
-            const github = newEngineer.value.github;
+            const name = newEngineer.name;
+            const id = newEngineer.id;
+            const email = newEngineer.email;
+            const github = newEngineer.github;
 
-            expect(name).toEqual('name');
-            expect(id).toEqual('id');
-            expect(email).toEqual('email');
-            expect(github).toEqual('github');
+            expect(name).toEqual('engineer');
+            expect(id).toEqual('1');
+            expect(email).toEqual('engineer@gmail.com');
+            expect(github).toEqual('github.com/engineer');
         });
     });
 });
