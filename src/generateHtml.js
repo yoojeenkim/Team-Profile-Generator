@@ -1,43 +1,43 @@
 function renderCards(data) {
     switch (data.role) {
         case 'Manager':
-            return `<div class="card">
+            return `<div class="card mx-5 my-4">
             <div class="card-header text-white bg-primary">
-            <h4 class="card-title">${data.name}</h4>
-            <h6 class="text-muted card-sub-title mb-2">Manager</h6>
+            <h3 class="card-title">${data.name}</h3>
+            <h4>Manager</h4>
             </div>
             <div class="card-body">
             <ul class="list-group list-group-flush">
             <li class="list-group-item">ID: ${data.id}</li>
-            <li class="list-group-item">Email: ${data.email}</li>
+            <li class="list-group-item">Email: <a href="mailto:${data.email}">${data.email}</a></li>
             <li class="list-group-item">Office Number: ${data.officenumber}</li>
             </ul>
             </div>
             </div>`;
         case 'Engineer':
-            return `<div class="card">
+            return `<div class="card mx-5 my-4">
             <div class="card-header text-white bg-primary">
-            <h4 class="card-title">${data.name}</h4>
-            <h6 class="text-muted card-sub-title mb-2">Engineer</h6>
+            <h3 class="card-title">${data.name}</h3>
+            <h4>Engineer</h4>
             </div>
             <div class="card-body">
             <ul class="list-group list-group-flush">
             <li class="list-group-item">ID: ${data.id}</li>
-            <li class="list-group-item">Email: ${data.email}</li>
-            <li class="list-group-item">GitHub: ${data.github}</li>
+            <li class="list-group-item">Email: <a href="mailto:${data.email}">${data.email}</a></li>
+            <li class="list-group-item">GitHub: <a href="https://github.com/${data.github}" target="_blank">${data.github}</a></li>
             </ul>
             </div>
             </div>`;
         case 'Intern':
-            return `<div class="card">
+            return `<div class="card mx-5 my-4">
             <div class="card-header text-white bg-primary">
-            <h4 class="card-title">${data.name}</h4>
-            <h6 class="text-muted card-sub-title mb-2">Intern</h6>
+            <h3 class="card-title">${data.name}</h3>
+            <h4>Intern</h4>
             </div>
             <div class="card-body">
             <ul class="list-group list-group-flush">
             <li class="list-group-item">ID: ${data.id}</li>
-            <li class="list-group-item">Email: ${data.email}</li>
+            <li class="list-group-item">Email: <a href="mailto:${data.email}">${data.email}</a></li>
             <li class="list-group-item">School: ${data.school}</li>
             </div>
             </ul>
@@ -68,14 +68,19 @@ function generateHtml(data) {
     <title>Team Profile Generator</title>
 </head>
 <body>
-    <div class="d-lg-flex justify-content-lg-center align-items-lg-center team-header">
+    <div class="d-flex justify-content-center align-items-center team-header">
         <h2>My Team</h2>
     </div>
-    <div class="container-fluid d-flex flex-row justify-content-center flex-wrap">
-        ${cards.join('\n')}
+    <div class="container">
+        <div class="row">
+            <div class="d-flex justify-content-center flex-wrap">
+                ${cards.join('\n')}
+            </div>
+        </div>
     </div>
-    
+
 </body>
+
 </html>`;
 }
 
