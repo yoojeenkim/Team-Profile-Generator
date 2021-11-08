@@ -10,7 +10,7 @@ describe("Manager", () => {
                 officenumber: "101"
             };
 
-            const Manager = new Manager(value);
+            const newManager = new Manager(value);
             const name = newManager.name;
             const id = newManager.id;
             const email = newManager.email;
