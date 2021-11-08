@@ -8,6 +8,10 @@ For managers that work in an organized setting, this Team-Profile-Generator crea
 
 To start the program, run 'npm i' to install necessary packages.
 
+## Video Link
+
+[Link to Walkthrough Video]()
+
 ## Resources
 
 [Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
