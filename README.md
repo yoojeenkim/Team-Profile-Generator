@@ -10,7 +10,7 @@ To start the program, run 'npm i' to install necessary packages.
 
 ## Video Link
 
-[Link to Walkthrough Video]()
+[Link to Walkthrough Video](https://drive.google.com/file/d/1dHJL_WAiUQXDf4Ywu8xT2w7Y6mcM1uCA/view?usp=sharing)
 
 ## Resources
 
